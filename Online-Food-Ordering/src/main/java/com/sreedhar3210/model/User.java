@@ -28,13 +28,14 @@ public class User {
 
     @JsonIgnore                      //JsonIgnore doesn't include that particular variable while fetching data.
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "customer")
-
-    
-    private List<Order>orderList = new ArrayList<Order>();
+    private List<Order>orders = new ArrayList<Order>();
 
     @ElementCollection
     private List<RestaurantDto>favorites = new ArrayList<>();
 
+    //cascade = CascadeType.ALL will remove all the Related Addresses when User is Removed.
+    //orphanRemoval = true will enable deletion of child records from parent.
+    //in this case orphan removal allows us to remove the addresses
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Address> addresses = new ArrayList<>();
 }
