@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Online Food Ordering:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Online_Food_Ordering_jar</output-path>
+    <root id="archive" name="Online Food Ordering.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>
